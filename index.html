@@ -1,1 +1,606 @@
-This is a Fancy Wiki
+<!DOCTYPE html>
+<html>
+<title>UndeStudiem</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik&display=swap">
+<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
+<style>
+
+/******************
+	General
+*******************/
+
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 180px;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+body,h2,h3,h4,h5,h6 {font-family: "Rubik", sans-serif;}
+body, html{
+  height: 100%;
+  background-color: #d2e2ff;
+  line-height: 1.8;
+}
+p {
+  text-align: justify;
+  font-size: 1.2em;
+  color: rgb(31, 31, 31);
+}
+.heading1 {
+	font-size: 2em;
+	font-weight: bold;
+}
+
+.w3-container {
+  background-color: rgb(255, 251, 250);
+  margin-top: 4em;
+  padding: 5em;
+}
+
+.milestone {
+  font-size: 12px;
+}
+
+/******************
+	Background
+*******************/
+
+.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5, .bgimg-6, .bgimg-7, .bgimg-8 {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bgimg-1 {
+  background-image: url("./resources/23423nami.png");
+  background-size: cover;
+  min-height: 100%;
+}
+
+
+/******************
+	Navigation
+*******************/
+
+.home-nav {
+  font-family: 'Rubik', sans-serif;
+  font-size: 1.5em;
+  font-weight: bold;
+  z-index: -1;
+}
+
+.w3-top {
+  z-index:10;
+  background-color: #1d4ac5;
+  font-size: 1.25em;
+  color: #1b1b1b;
+}
+
+.w3-card {
+  box-shadow: none !important;
+}
+
+.w3-white {
+  background-color: #bfdef0 !important;
+}
+
+.navbar-item {
+  padding-top: 10px;
+  font-size: 1.25em;
+  color: #f5f5f5;
+}
+
+.navbar-item:hover, .navbar-item:active {
+  background-color: transparent !important;
+  color: #f5f5f5;
+}
+
+.navbar-item text {
+  font-size: 0.8em;
+  fill: #f5f5f5;
+}
+
+.navbar-item:hover, .navbar-item:active{
+  color: #d5dbfc;
+}
+
+.button-item {
+  padding-top: 10px;
+  font-size: 1.25em;
+  background-color: #1d4ac5;
+  color: #ffffff;
+}
+
+.button-item:hover, .button-item:active {
+  background-color: #3e63c7;
+}
+
+.button-item a text {
+  font-size: 1em;
+  /* color: #ffffff; */
+}
+
+.rest-nav {
+  margin-top: 0.5em;
+}
+/******************
+	Home Section
+*******************/
+#home {
+	font-size: 5em;
+}
+.w3-hover-opacity {cursor: pointer;}
+@media only screen and (max-device-width: 1600px) {
+  .bgimg-1, .bgimg-2, .bgimg-3 {
+	background-attachment: scroll;
+	min-height: 400px;
+  }
+}
+ul {
+	padding-left: 0;
+	counter-reset: index;  
+}
+
+li {
+  counter-increment: index; 
+  display: flex;
+  align-items: center;
+  color: rgb(92, 92, 92);
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+/******************
+	Competition Img
+*******************/
+
+.questionnaire-img {
+  width: 70%;
+  height: 70%;
+}
+
+.column {
+  float: left;
+  width: 20%;
+  padding: 5px;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.column_wireframe {
+  float: left;
+  width: 50%;
+}
+
+/******************
+	Team
+*******************/
+
+.tilesWrap {
+	padding: 0;
+	list-style: none;
+	text-align: center;
+}
+.tilesWrap li {
+	padding-left: 10px;
+	/* padding-top: 20px; */
+	display: inline-block;
+	width: 33.33%;
+	min-width: 200px;
+	max-width: 230px;
+	position: relative;
+	vertical-align: top;
+	margin: 10px;
+	min-height: 10vh;
+	background: #1d4ac5;
+	text-align: left;
+}
+.tilesWrap li h2 {
+  color: #f5f5f5;
+  font-size: 14px;
+  margin: 0;
+  position: absolute;
+  opacity: 0.8;
+  top: 40px;
+  right: 10px;
+}
+.tilesWrap li h3 {
+  color: #f5f5f5;
+  font-size: 18px;
+}
+
+/******************
+	Further
+*******************/
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid rgb(92, 92, 92);
+  margin: 1em 0;
+  padding: 0;
+}
+
+/***
+TIMELINE
+***/
+.timeline {
+  list-style: none;
+  padding: 20px 0 20px;
+  position: relative;
+}
+
+.timeline:before {
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  content: " ";
+  width: 3px;
+  background-color: #000000;
+  left: 50%;
+  margin-left: -1.5px;
+}
+
+.timeline > li {
+  display: block;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.timeline > li:before, .timeline > li:after {
+  content: " ";
+  display: table;
+}
+
+.timeline > li:after {
+  clear: both;
+}
+
+.timeline > li:before, .timeline > li:after {
+  content: " ";
+  display: table;
+}
+
+.timeline > li:after {
+  clear: both;
+}
+
+.timeline > li > .timeline-panel {
+  background-color: #fffbfa;
+  width: 45%;
+  float: left;
+  border: 5px solid #1d4ac5;
+  border-radius: 2px;
+  padding: 20px;
+  position: relative;
+}
+
+.timeline > li > .timeline-panel:before {
+  position: absolute;
+  top: 26px;
+  right: -15px;
+  display: inline-block;
+  border-top: 15px solid transparent;
+  border-left: 15px solid #ccc;
+  border-right: 0 solid #ccc;
+  border-bottom: 15px solid transparent;
+  content: " ";
+}
+.timeline > li > .timeline-panel:after {
+  position: absolute;
+  top: 27px;
+  right: -14px;
+  display: inline-block;
+  border-top: 14px solid transparent;
+  border-left: 14px solid #fff;
+  border-right: 0 solid #fff;
+  border-bottom: 14px solid transparent;
+  content: " ";
+}
+.timeline > li > .timeline-badge {
+  color: #000;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 1.4em;
+  text-align: center;
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  margin-left: -25px;
+  background-color: #999999;
+  z-index: 100;
+  border-top-right-radius: 50%;
+  border-top-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
+
+.timeline > li.timeline-inverted > .timeline-panel {
+  float: right;
+}
+
+.timeline > li.timeline-inverted > .timeline-panel:before {
+  border-left-width: 0;
+  border-right-width: 15px;
+  left: -15px;
+  right: auto;
+}
+
+.timeline > li.timeline-inverted > .timeline-panel:after {
+  border-left-width: 0;
+  border-right-width: 14px;
+  left: -14px;
+  right: auto;
+}
+.timeline-badge.primary {
+  background-color: #e5e6f5 !important;
+}
+
+.timeline-badge.success {
+  background-color: #e4e6fc !important;
+}
+
+.timeline-badge.warning {
+  background-color: #cdd6ff !important;
+}
+
+.timeline-badge.danger {
+  background-color: #bdcbf8 !important;
+}
+
+.timeline-badge.info {
+  background-color: #9a9bef !important;
+}
+
+.timeline-title {
+  margin-top: 0;
+  color: inherit;
+}
+
+.timeline-body > p, .timeline-body > ul {
+  margin-bottom: 0;
+}
+
+.timeline-body > p + p {
+  margin-top: 5px;
+}
+
+</style>
+
+<body>
+
+<div class="w3-top">
+  <div class="w3-bar" id="myNavbar">
+
+	  <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-left" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+		<i class="fa fa-bars"></i>
+	  </a>
+
+	  <div class="home-nav w3-left w3-hide-medium w3-hide-small" style="display:block; margin: 0 auto;">
+		<svg width="140" height="54" class="navbar-item">
+		  <a href="#home">
+			<text x="70" y="25"
+				  text-anchor="middle"
+				  alignment-baseline="middle">
+			  HOME
+			</text>
+		  </a>
+		</svg>
+	  </div>
+
+	  <div class="rest-nav w3-right w3-hide-medium w3-hide-small" style="display:block; margin: 0 auto;">
+		<svg width="200" height="50" class="navbar-item">
+		  <a href="#validation">
+			<text x="100" y="25"
+				  text-anchor="middle"
+				  alignment-baseline="middle">
+			  BUILDING PROCESS
+			</text>
+		  </a>
+		</svg>
+	  </div>
+
+	  <div class="rest-nav w3-right w3-hide-medium w3-hide-small" style="display:block; margin: 0 auto;">
+		<svg width="80" height="50" class="navbar-item">
+		  <a href="#contact">
+
+			<text x="40" y="25"
+				  text-anchor="middle"
+				  alignment-baseline="middle">
+			  TEAM
+			</text>
+		  </a>
+		</svg>
+	  </div>
+
+	  <div class="rest-nav w3-right w3-hide-medium w3-hide-small" style="display:block; margin: 0 auto;">
+		<svg width="80" height="50" class="navbar-item">
+		  <a href="#about">
+			<text x="40" y="25"
+				  text-anchor="middle"
+				  alignment-baseline="middle">
+			  ABOUT
+			</text>
+		  </a>
+		</svg>
+	  </div>
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+	<a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
+	<a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">TEAM</a>
+	<a href="#validation" class="w3-bar-item w3-button" onclick="toggleFunction()">BUILDING PROCESS</a>
+  </div>
+</div>
+
+<div class="bgimg-1 w3-display-container" id="home">
+  <div class="w3-display-middle" style="white-space:nowrap;">
+  </div>
+</div>
+
+<!-- Container (About Section) -->
+<div class="w3-content w3-container w3-padding-64" id="about">
+	<div class="heading1">
+		<h1>About UndeStudiem</h1>
+	</div>
+	<p>
+		<!-- Fill here -->
+	</p>
+</div>
+
+<div class="w3-content w3-container w3-padding-64" id="validation">
+
+	<div class="container">
+		<div class="heading1">
+		<h1 id="timeline">Building process</h1>
+		</div>
+		<ul class="timeline">
+		<li>
+		  <div class="timeline-badge primary">1</div>
+		  <div class="timeline-panel">
+			<div class="timeline-heading">
+			  <h4 class="timeline-title"><em><b>Project Description</b></em></h4>
+			</div>
+			<div class="timeline-body">
+			  <p><b>Deadline: 19 October 2020</b></p>
+			  <p><i>This section offers an overview of our project: UndeStudiem. </i></p>
+			  <svg width="140" height="54" class="button-item">
+			  <a href="#milestone1">
+				<text x="70" y="25"
+				  text-anchor="middle"
+				  alignment-baseline="middle">
+				  Read More
+				</text>
+			  </a>
+			</svg>
+			</div>
+		  </div>
+		</li>
+		</ul>
+	</div>
+   </div>
+
+	<!-----------------
+		Milestone
+	------------------>
+
+   	<div class="w3-content w3-container w3-padding-64" id="milestone1">
+		<p class="milestone">Milestone 1</p>
+
+		<!-- Problema -->
+	  	<h3 class="heading1">The Problem</h3>
+		<p>
+			<!-- Fill here -->
+		</p>
+
+		<!-- Solutia noastra -->
+	  	<h3 class="heading1">Our Solution</h3>
+		<p>
+			<!-- Fill here -->
+		</p>
+
+		<!-- Customer Segment -->
+		<h3 class="heading1">Customer Segment</h3>
+		<p>
+			<!-- Fill here -->
+		</p>
+
+		<!-- Competitia -->
+	  	<h3 class="heading1">Competition</h3>
+		<p>
+			<!-- Fill here -->
+		</p>
+
+		<!-- Avantaje -->
+		<h3 class="heading1">Our advantages</h3>
+		<p>
+			<!-- Fill here -->
+		</p>
+
+		<!-- Metrici -->
+		<h3 class="heading1">Key Metrics</h3>
+		<p>
+			<!-- Fill here -->
+		</p>
+		
+		<!-- Costuri -->
+		<h3 class="heading1">Cost Structure</h3>
+		<p>
+			<!-- Fill here -->
+		</p>
+
+		<!-- Surse de venit -->
+		<h3 class="heading1">Revenue streams</h3>
+		<p>
+			<!-- Fill here -->
+		</p>
+
+	</div>
+
+
+<!-----------------
+		Team
+------------------>
+</div>
+   <div class="w3-content w3-container w3-padding-64" id="contact">	
+	<div class="heading1">Our Team</div>
+
+		<ul class="tilesWrap">
+			<li>
+				<h2><i>Project Manager</i></h2>
+				<h3><b>Daniela Papacica</b></h3>
+			</li>
+			<li>
+				<h2><i>Business Analyst</i></h2>
+				<h3><b>Oana Dinca</b></h3>
+			</li>
+			<li>
+				<h2><i>FullStack Developer<i></h2>
+				<h3><b>Antonio Herdes</b></h3>
+			</li>
+			<li>
+				<h2><i>FullStack Developer<i></h2>
+				<h3><b>Dragos Sandulescu</b></h3>
+			</li>
+			<li>
+				<h2><i>FullStack Developer<i></h2>
+				<h3><b>Maria Micu</b></h3>
+			</li>
+			<li>
+				<h2><i>FullStack Developer<i></h2>
+				<h3><b>Octav Teculescu</b></h3>
+			</li>
+		</ul>
+	</div>
+</div>
+
+</body>
+</html>
