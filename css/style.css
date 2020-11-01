@@ -1617,7 +1617,7 @@ h6 {
 
 /* The actual timeline (the vertical ruler) */
 .timeline {
-  left: 40%;
+  left: 50%;
   position: relative;
   max-width: 1200px;
   margin: 0 auto;
