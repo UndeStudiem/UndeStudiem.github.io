@@ -1,714 +1,1205 @@
-﻿<!DOCTYPE html>
-<html>
-<title>UndeStudiem</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik&display=swap">
-<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>UndeStudiem</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
 
-<style>
+  <!-- Favicons -->
+  <link href="img/toca.jpg" rel="icon">
+  <link href="img/toca.jpg" rel="apple-touch-icon">
 
-/******************
-	General
-*******************/
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,500,600,700,700i|Montserrat:300,400,500,600,700" rel="stylesheet">
 
-div.gallery {
-  margin: 5px;
-  border: 1px solid #ccc;
-  float: left;
-  width: 180px;
-}
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-div.gallery:hover {
-  border: 1px solid #777;
-}
+  <!-- Libraries CSS Files -->
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
 
-div.gallery img {
-  width: 100%;
-  height: auto;
-}
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
 
-div.desc {
-  padding: 15px;
-  text-align: center;
-}
-
-body,h2,h3,h4,h5,h6 {font-family: "Rubik", sans-serif;}
-body, html{
-  height: 100%;
-  background-color: #d2e2ff;
-  line-height: 1.8;
-}
-p {
-  text-align: justify;
-  font-size: 1.2em;
-  color: rgb(31, 31, 31);
-}
-.heading1 {
-	font-size: 2em;
-	font-weight: bold;
-}
-
-.w3-container {
-  background-color: rgb(255, 251, 250);
-  margin-top: 4em;
-  padding: 5em;
-}
-
-.milestone {
-  font-size: 12px;
-}
-
-/******************
-	Background
-*******************/
-
-.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5, .bgimg-6, .bgimg-7, .bgimg-8 {
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.bgimg-1 {
-  background-image: url("./resources/23423nami.png");
-  background-size: cover;
-  min-height: 5%;
-}
-
-
-/******************
-	Navigation
-*******************/
-
-.home-nav {
-  font-family: 'Rubik', sans-serif;
-  font-size: 1.5em;
-  font-weight: bold;
-  z-index: -1;
-}
-
-.w3-top {
-  z-index:10;
-  background-color: #1d4ac5;
-  font-size: 1.25em;
-  color: #1b1b1b;
-}
-
-.w3-card {
-  box-shadow: none !important;
-}
-
-.w3-white {
-  background-color: #bfdef0 !important;
-}
-
-.navbar-item {
-  padding-top: 10px;
-  font-size: 1.25em;
-  color: #f5f5f5;
-}
-
-.navbar-item:hover, .navbar-item:active {
-  background-color: transparent !important;
-  color: #f5f5f5;
-}
-
-.navbar-item text {
-  font-size: 0.8em;
-  fill: #f5f5f5;
-}
-
-.navbar-item:hover, .navbar-item:active{
-  color: #d5dbfc;
-}
-
-.button-item {
-  padding-top: 10px;
-  font-size: 1.25em;
-  background-color: #1d4ac5;
-  color: #ffffff;
-}
-
-.button-item:hover, .button-item:active {
-  background-color: #3e63c7;
-}
-
-.button-item a text {
-  font-size: 1em;
-  /* color: #ffffff; */
-}
-
-.rest-nav {
-  margin-top: 0.5em;
-}
-/******************
-	Home Section
-*******************/
-#home {
-	font-size: 5em;
-}
-.w3-hover-opacity {cursor: pointer;}
-@media only screen and (max-device-width: 1600px) {
-  .bgimg-1, .bgimg-2, .bgimg-3 {
-	background-attachment: scroll;
-	min-height: 400px;
-  }
-}
-ul {
-	padding-left: 0;
-	counter-reset: index;  
-}
-
-li {
-  counter-increment: index; 
-  display: flex;
-  align-items: center;
-  color: rgb(92, 92, 92);
-  font-size: 14px;
-  box-sizing: border-box;
-}
-
-/******************
-	Competition Img
-*******************/
-
-.questionnaire-img {
-  width: 70%;
-  height: 70%;
-}
-
-.column {
-  float: left;
-  width: 20%;
-  padding: 5px;
-}
-
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-.column_wireframe {
-  float: left;
-  width: 50%;
-}
-
-/******************
-	Team
-*******************/
-
-.tilesWrap {
-	padding: 0;
-	list-style: none;
-	text-align: center;
-}
-.tilesWrap li {
-	padding-left: 10px;
-	/* padding-top: 20px; */
-	display: inline-block;
-	width: 33.33%;
-	min-width: 200px;
-	max-width: 230px;
-	position: relative;
-	vertical-align: top;
-	margin: 10px;
-	min-height: 10vh;
-	background: #1d4ac5;
-	text-align: left;
-}
-.tilesWrap li h2 {
-  color: #f5f5f5;
-  font-size: 14px;
-  margin: 0;
-  position: absolute;
-  opacity: 0.8;
-  top: 40px;
-  right: 10px;
-}
-.tilesWrap li h3 {
-  color: #f5f5f5;
-  font-size: 18px;
-}
-
-/******************
-	Further
-*******************/
-
-hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid rgb(92, 92, 92);
-  margin: 1em 0;
-  padding: 0;
-}
-
-/***
-TIMELINE
-***/
-.timeline {
-  list-style: none;
-  padding: 20px 0 20px;
-  position: relative;
-}
-
-.timeline:before {
-  top: 0;
-  bottom: 0;
-  position: absolute;
-  content: " ";
-  width: 3px;
-  background-color: #000000;
-  left: 50%;
-  margin-left: -1.5px;
-}
-
-.timeline > li {
-  display: block;
-  margin-bottom: 20px;
-  position: relative;
-}
-
-.timeline > li:before, .timeline > li:after {
-  content: " ";
-  display: table;
-}
-
-.timeline > li:after {
-  clear: both;
-}
-
-.timeline > li:before, .timeline > li:after {
-  content: " ";
-  display: table;
-}
-
-.timeline > li:after {
-  clear: both;
-}
-
-.timeline > li > .timeline-panel {
-  background-color: #fffbfa;
-  width: 45%;
-  float: left;
-  border: 5px solid #1d4ac5;
-  border-radius: 2px;
-  padding: 20px;
-  position: relative;
-}
-
-.timeline > li > .timeline-panel:before {
-  position: absolute;
-  top: 26px;
-  right: -15px;
-  display: inline-block;
-  border-top: 15px solid transparent;
-  border-left: 15px solid #ccc;
-  border-right: 0 solid #ccc;
-  border-bottom: 15px solid transparent;
-  content: " ";
-}
-.timeline > li > .timeline-panel:after {
-  position: absolute;
-  top: 27px;
-  right: -14px;
-  display: inline-block;
-  border-top: 14px solid transparent;
-  border-left: 14px solid #fff;
-  border-right: 0 solid #fff;
-  border-bottom: 14px solid transparent;
-  content: " ";
-}
-.timeline > li > .timeline-badge {
-  color: #000;
-  width: 50px;
-  height: 50px;
-  line-height: 50px;
-  font-size: 1.4em;
-  text-align: center;
-  position: absolute;
-  top: 16px;
-  left: 50%;
-  margin-left: -25px;
-  background-color: #999999;
-  z-index: 100;
-  border-top-right-radius: 50%;
-  border-top-left-radius: 50%;
-  border-bottom-right-radius: 50%;
-  border-bottom-left-radius: 50%;
-}
-
-.timeline > li.timeline-inverted > .timeline-panel {
-  float: right;
-}
-
-.timeline > li.timeline-inverted > .timeline-panel:before {
-  border-left-width: 0;
-  border-right-width: 15px;
-  left: -15px;
-  right: auto;
-}
-
-.timeline > li.timeline-inverted > .timeline-panel:after {
-  border-left-width: 0;
-  border-right-width: 14px;
-  left: -14px;
-  right: auto;
-}
-.timeline-badge.primary {
-  background-color: #e5e6f5 !important;
-}
-
-.timeline-badge.success {
-  background-color: #e4e6fc !important;
-}
-
-.timeline-badge.warning {
-  background-color: #cdd6ff !important;
-}
-
-.timeline-badge.danger {
-  background-color: #bdcbf8 !important;
-}
-
-.timeline-badge.info {
-  background-color: #9a9bef !important;
-}
-
-.timeline-title {
-  margin-top: 0;
-  color: inherit;
-}
-
-.timeline-body > p, .timeline-body > ul {
-  margin-bottom: 0;
-}
-
-.timeline-body > p + p {
-  margin-top: 5px;
-}
-
-</style>
+  <!-- =======================================================
+    Theme Name: Rapid
+    Theme URL: https://bootstrapmade.com/rapid-multipurpose-bootstrap-business-template/
+    Author: BootstrapMade.com
+    License: https://bootstrapmade.com/license/
+  ======================================================= -->
+</head>
 
 <body>
+  <!--==========================
+  Header
+  ============================-->
+  <header id="header">
 
-<div class="w3-top">
-  <div class="w3-bar" id="myNavbar">
+    <div class="container">
 
-	  <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-left" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
-		<i class="fa fa-bars"></i>
-	  </a>
+      <div class="logo float-left">
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <h1 class="text-light"><a href="#intro" class="scrollto"><span>Unde Studiem</span></a></h1>
+        <!-- <a href="#header" class="scrollto"><img src="img/logo.png" alt="" class="img-fluid"></a> -->
+      </div>
 
-	  <div class="home-nav w3-left w3-hide-medium w3-hide-small" style="display:block; margin: 0 auto;">
-		<svg width="140" height="54" class="navbar-item">
-		  <a href="#home">
-			<text x="70" y="25"
-				  text-anchor="middle"
-				  alignment-baseline="middle">
-			  HOME
-			</text>
-		  </a>
-		</svg>
-	  </div>
+      <nav class="main-nav float-right d-none d-lg-block">
+        <ul>
+          <!-- <li class="active"><a href="#about">About</a></li> -->
+          <li><a href="#timeline">Timeline</a></li>
+          <li><a href="#problem">Project Description</a></li>
+          <li><a href="#services">Validation 1</a></li>
+          <!-- <li><a href="#portfolio">Portfolio</a></li> -->
+          <li><a href="#team">Team</a></li>
+          <!-- <li class="drop-down"><a href="">Drop Down</a>
+            <ul>
+              <li><a href="#">Drop Down 1</a></li>
+              <li class="drop-down"><a href="#">Drop Down 2</a>
+                <ul>
+                  <li><a href="#">Deep Drop Down 1</a></li>
+                  <li><a href="#">Deep Drop Down 2</a></li>
+                  <li><a href="#">Deep Drop Down 3</a></li>
+                  <li><a href="#">Deep Drop Down 4</a></li>
+                  <li><a href="#">Deep Drop Down 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Drop Down 3</a></li>
+              <li><a href="#">Drop Down 4</a></li>
+              <li><a href="#">Drop Down 5</a></li>
+            </ul>
+          </li> -->
+          <!-- <li><a href="#footer">Contact Us</a></li> -->
+        </ul>
+      </nav><!-- .main-nav -->
+      
+    </div>
+  </header><!-- #header -->
 
-	  <div class="rest-nav w3-right w3-hide-medium w3-hide-small" style="display:block; margin: 0 auto;">
-		<svg width="200" height="50" class="navbar-item">
-		  <a href="#validation">
-			<text x="100" y="25"
-				  text-anchor="middle"
-				  alignment-baseline="middle">
-			  BUILDING PROCESS
-			</text>
-		  </a>
-		</svg>
-	  </div>
+  <!--==========================
+    Intro Section
+  ============================-->
+  <section id="intro" class="clearfix">
+    <div class="container d-flex h-100">
+      <div class="row justify-content-center align-self-center">
+        <div class="col-md-6 intro-info order-md-first order-last">
+          <!-- Rather the chance, the choice is the one determining our destiny -->
+          <h2>Rather the chance, the choice is the one <span>determining our destiny</span></h2>
+          <div>
+            <a href="#timeline" class="btn-get-started scrollto">Get Started</a>
+          </div>
+        </div>
+  
+        <div class="col-md-6 intro-img order-md-last order-first">
+          <img src="img/intro-img.svg" alt="" class="img-fluid">
+        </div>
+      </div>
 
-	  <div class="rest-nav w3-right w3-hide-medium w3-hide-small" style="display:block; margin: 0 auto;">
-		<svg width="80" height="50" class="navbar-item">
-		  <a href="#contact">
-
-			<text x="40" y="25"
-				  text-anchor="middle"
-				  alignment-baseline="middle">
-			  TEAM
-			</text>
-		  </a>
-		</svg>
-	  </div>
-
-	  <div class="rest-nav w3-right w3-hide-medium w3-hide-small" style="display:block; margin: 0 auto;">
-		<svg width="80" height="50" class="navbar-item">
-		  <a href="#about">
-			<text x="40" y="25"
-				  text-anchor="middle"
-				  alignment-baseline="middle">
-			  ABOUT
-			</text>
-		  </a>
-		</svg>
-	  </div>
-  </div>
-
-  <!-- Navbar on small screens -->
-  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
-	<a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
-	<a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">TEAM</a>
-	<a href="#validation" class="w3-bar-item w3-button" onclick="toggleFunction()">BUILDING PROCESS</a>
-  </div>
-</div>
-
-<div class="bgimg-1 w3-display-container" id="home">
-  <div class="w3-display-middle" style="white-space:nowrap;">
-  </div>
-</div>
-
-<!-- Container (About Section) -->
-<div class="w3-content w3-container w3-padding-64" id="about">
-	<div class="heading1">
-		<h1>About UndeStudiem</h1>
-	</div>
-	<p>
-		<!-- Fill here -->
-	</p>
-</div>
-
-<div class="w3-content w3-container w3-padding-64" id="validation">
-
-	<div class="container">
-		<div class="heading1">
-		<h1 id="timeline">Building process</h1>
-		</div>
-		<ul class="timeline">
-		<li>
-		  <div class="timeline-badge primary">1</div>
-		  <div class="timeline-panel">
-			<div class="timeline-heading">
-			  <h4 class="timeline-title"><em><b>Project Description</b></em></h4>
-			</div>
-			<div class="timeline-body">
-			  <p><b>Deadline: 19 October 2020</b></p>
-			  <p><i>This section offers an overview of our project: UndeStudiem. </i></p>
-			  <svg width="140" height="54" class="button-item">
-			  <a href="#milestone1">
-				<text x="70" y="25"
-				  text-anchor="middle"
-				  alignment-baseline="middle">
-				  Read More
-				</text>
-			  </a>
-			</svg>
-			</div>
-		  </div>
-		</li>
-		</ul>
-	</div>
-   </div>
-
-	<!-----------------
-		Milestone
-	------------------>
-
-<div class="w3-content w3-container w3-padding-64" id="milestone1">
-	<p class="milestone">Milestone 1</p>
-
-	<!-- Problema -->
-	<h3 class="heading1">The Problem</h3>
-	<p>
-		The application process for each university is most of the time described on some obscure old page or even broken down across multiple PDF files. This situation makes it even harder for high school graduates to decide on where should they apply, even for those that have an idea about their options already. An usual student willing to apply for higher education cycle considers at least around two or three universities, each imposing different procedures, costs and dates to take into account.
-	</p>
-	<p>
-		Those are all inconveniences for those that live in big cities with at least a few options, but those are real problems for people from rural zones, which have to travel to each university in order to apply (usually multiple times, as the enrollment process requires the person to be on site at least 2 or 3 times). Additional stress produces through scattered information and obscure sources affect both young students and their families, usually demotivating candidates to apply to fewer and closer universities, even if those might not be always the best choices available for them.
-	</p>
-
-	<!-- Solutia noastra -->
-	<h3 class="heading1">Our Solution</h3>
-	<p>
-		A presentation platform for all universities in Romania build on the idea that choosing the right university for oneself should be the easiest part of the process for young adults. In order to achieve this, centralizing relevant information such as application steps, how many students can enroll to the said institution, taxes, additional costs, the process of obtaining a scholarship, information about campus accommodations, optional and non-optional courses.
-	</p>
-	<p>
-		In order to better validate and update information, reviews can be added to any university page. Also, in order to actually help the future students, not just centralize information from university websites, the platform would support a number of features designed to help comparison and filtering based on search criteria on the hosted data. This way, people interested can narrow their options based on a few key factors before going more in-depth.
-	</p>
-
-	<!-- Customer Segment -->
-	<h3 class="heading1">Customer Segment</h3>
-	<p>
-		Customers of this platform include both teens and adults. Teens that recently graduated (or are about to in the next few years at most, but those in a smaller proportion) that have an interest in pursuing a higher educational degree and parents that intend to solidify their children's future and education and take a look in good university options.
-	</p>
-
-	<!-- Competitia -->
-	<h3 class="heading1">Competition</h3>
-	<div>
-		<a href="https://www.adservio.ro/admitere">
-			Adservio
-		</a>
-		<img src="./assets/competition_logos/adservio.png" alt="Adservio" style="height:400px">
-	</div>
-	</br>
-
-	<div>
-		<a href="https://www.4icu.org/ro/">
-			UniRank
-		</a>
-		<img src="./assets/competition_logos/uni-rank.png" alt="UniRank" style="height:400px; margin-top:30px">
-	</div>
-	</br>
-
-	<div>
-		<a href="https://www.topuniversities.com/universities/level/undergrad/country/romania/subject/computer-science-information-systems/subject/development-studies">
-			TopUniversities
-		</a>
-		<img src="./assets/competition_logos/top-universities.png" alt="TopUniversities" style="height:400px">
-	</div>
-	</br>
-
-	<div>
-		<a href="https://www.optiuni.ro/">
-			OptiuniUniversitare
-		</a>
-		<img src="./assets/competition_logos/optiuni-universitare.png" alt="OptiuniUniversitare" style="height:400px; margin-top:30px">
-	</div>
-	</br>
-
-	<!-- Avantaje -->
-	<h3 class="heading1">Our advantages</h3>
-	<p>
-		Some of the advantages we have over the alternative such platforms:
-	</p>
-	<ol>
-		<li>
-			Dedicated to future Romanian students, targeting all the university options from Romania
-		</li>
-		<li>
-			Information is up to date
-		</li>
-		<li>
-			Rich but essential and complete information about each study program and university
-		</li>
-		<li>
-			Allows users to make intelligent custom search selections and filters
-		</li>
-		<li>
-			Feedback, reviews and rating system from students and former students
-		</li>
-		<li>
-			Vizibility - business and marketing plan for making the public aware of this platform
-		</li>
-	</ol>
-
-	<!-- Metrici -->
-	<h3 class="heading1">Key Metrics</h3>
-	<p>
-		Key metrics that we take into consideration in order to better follow our platform success and needs of improvements are:
-	</p>
-	<ol>
-		<li>
-			number of paid university accounts
-		</li>
-		<li>
-			number of daily visits from student accounts
-		</li>
-		<li>
-			number of reports for unaccurate information from students
-		</li>
-		<li>
-			average number of university information items added by a student
-		</li>
-		<li>
-			average number of webpage requests per minute/hour/day
-		</li>
-		<li>
-			total count of students who access the app more than once
-		</li>
-		<li>
-			number of app crash reports from users
-		</li>
-		<li>
-			percent of students who access a specific university page that decide to study at that university
-		</li>
-	</ol>
-
-	<!-- Costuri -->
-	<h3 class="heading1">Cost Structure</h3>
-	<p>
-		Some of the sources of costs include:
-	</p>
-	<ol>
-		<li>
-			Business set-up cost
-		</li>
-		<li>
-			Domain name
-		</li>
-		<li>
-			Hosting for our website
-		</li>
-		<li>
-			Promoting our website
-		</li>
-		<li>
-			Marketing & Advertising
-		</li>
-	</ol>
-
-	<!-- Surse de venit -->
-	<h3 class="heading1">Revenue streams</h3>
-	<p>
-		Some of the revenue streams include:
-	</p>
-	<ol>
-		<li>
-			Audience Engagement and Relation - advertisements, affiliation marketing, market studies data, newsletters, partner extra promoting model
-		</li>
-		<li>
-			Content - free vs. subscription content
-		</li>
-		<li>
-			Expertise - relevant and up to date content & user experience taking into consideration their feedback
-		</li>
-	</ol>
-
-</div>
+    </div>
+  </section><!-- #intro -->
 
 
-<!-----------------
-		Team
------------------->
-</div>
-   <div class="w3-content w3-container w3-padding-64" id="contact">	
-	<div class="heading1">Our Team</div>
 
-		<ul class="tilesWrap">
-			<li>
-				<h2><i>Project Manager</i></h2>
-				<h3><b>Daniela Papacica</b></h3>
-			</li>
-			<li>
-				<h2><i>Business Analyst</i></h2>
-				<h3><b>Oana Dinca</b></h3>
-			</li>
-			<li>
-				<h2><i>FullStack Developer<i></h2>
-				<h3><b>Richard-Antonio Herdes</b></h3>
-			</li>
-			<li>
-				<h2><i>FullStack Developer<i></h2>
-				<h3><b>Dragos Sandulescu</b></h3>
-			</li>
-			<li>
-				<h2><i>FullStack Developer<i></h2>
-				<h3><b>Maria Micu</b></h3>
-			</li>
-			<li>
-				<h2><i>FullStack Developer<i></h2>
-				<h3><b>Octav Teculescu</b></h3>
-			</li>
-		</ul>
-	</div>
-</div>
+
+  <main id="main">
+
+
+    <!--==========================
+      Timeline Section
+    ============================-->
+
+    <section id="timeline">
+
+
+
+      <div class="container2">
+        <div class="row">
+
+          <div class="">
+            <div class="timeline-content">
+              <h2>Building process</h2>
+
+
+              <div class="timeline">
+                <div class="container2 left">
+                  <div class="content">
+                    <h2>19 Oct</h2>
+                    <h4>Project Description</h4>
+                    <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+                  </div>
+                </div>
+                <div class="container2 right">
+                  <div class="content">
+                    <h2>2 Nov</h2>
+                    <h4>Validation 1</h4>
+                    <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+                  </div>
+                </div>
+                <!-- <div class="container2 left">
+                  <div class="content">
+                    <h2>2015</h2>
+                    <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+                  </div>
+                </div> -->
+                <!-- <div class="container2 right">
+                  <div class="content">
+                    <h2>2012</h2>
+                    <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+                  </div>
+                </div> -->
+                <!-- <div class="container2 left">
+                  <div class="content">
+                    <h2>2011</h2>
+                    <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+                  </div>
+                </div> -->
+                <!-- <div class="container2 right">
+                  <div class="content">
+                    <h2>2007</h2>
+                    <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+                  </div> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section><!-- #timeline -->
+
+
+
+    <!--==========================
+      About Us Section
+    ============================-->
+    <!-- <section id="about">
+
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-5 col-md-6">
+            <div class="about-img">
+              <img src="img/about-img.jpg" alt="">
+            </div>
+          </div>
+
+          <div class="col-lg-7 col-md-6">
+            <div class="about-content">
+              <h2>About Us</h2>
+              <h3>Odio sed id eos et laboriosam consequatur eos earum soluta.</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              <p>Aut dolor id. Sint aliquam consequatur ex ex labore. Et quis qui dolor nulla dolores neque. Aspernatur consectetur omnis numquam quaerat. Sed fugiat nisi. Officiis veniam molestiae. Et vel ut quidem alias veritatis repudiandae ut fugit. Est ut eligendi aspernatur nulla voluptates veniam iusto vel quisquam. Fugit ut maxime incidunt accusantium totam repellendus eum error. Et repudiandae eum iste qui et ut ab alias.</p>
+              <ul>
+                <li><i class="ion-android-checkmark-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+                <li><i class="ion-android-checkmark-circle"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
+                <li><i class="ion-android-checkmark-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>#about -->
+
+
+
+    <!--==========================
+      Problem Section
+    ============================-->
+    <section id="problem">
+
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-6 col-md-6">
+            <div class="problem-img">
+              <br/><br/><br/><br/><br/><br/>
+              <img src="img/problem-img.png" alt="" width="500">
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-md-5">
+            <div class="problem-content">
+              <h2>The Problem</h2>
+              <p>The application process for each university is most of the time described on a paper stuck on some window of the main university building and on some obscure old online page, or even broken down across multiple PDF files. This situation makes it even harder especially for high school graduates to decide not only on where they should apply, but on how, when and on “the always underestimated” why.</p>
+              <p>An usual student willing to apply for higher education considers at least around two or three universities, each imposing different procedures, costs, travel expenses and dates to take into account. The enrollment process requires the person to be on site at least 2 or 3 times for each individual university. Sometimes they have even the same periods of enrollment happening only on site.</p>
+              <p>Additional stress produced through scattered information and obscure sources affect both young students and their families, usually demotivating candidates in order to apply to fewer and closer universities, even if those might not always be the best choices available for them. </p>
+              <p>Therefore, the initiation of the professional future of the student starts on the wrong foot. And it can easily end with dropping out, changing paths, accommodation problems, bank loans, accepting less than they deserve in terms of salary and employment status - all because of the lack of centralized information for the process of application.</p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section><!-- #problem -->
+
+
+    <!--==========================
+      Solution Section
+    ============================-->
+    <section id="problem">
+
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-5 col-md-6">
+            <div class="problem-img">
+              <br/><br/><br/>
+              <img src="img/solution.PNG" alt="" width="500">
+            </div>
+          </div>
+
+          <div class="col-lg-7 col-md-6">
+            <div class="problem-content">
+              <h2>Our Solution</h2>
+              <p>We propose a presentation platform for all universities in Romania built on the idea that keeping oneself up to date with regulations of the application process should be the easiest part for choosing the suitable university for young adults. In order to achieve this, we aim to centralize relevant information such as application steps, how many students can enroll to one institution, taxes, additional costs, the process of obtaining a scholarship, information about campus accommodations, optional and non-optional courses.</p>
+              <p>Moreover, in order to better validate and update information, reviews can be added to any university page. Also, in order to actually help the future students, the platform will not only support centralized information from university websites and public sources, but also a number of features designed to help comparison and filtering based on search criteria on the hosted data. This way, people interested can narrow their options based on a few key factors before going more in-depth.</p>
+              <p>Franklin Roosevelt once said: “Rather the chance, the choice is the one determining our destiny”. We want to go forward with this and add: the informed choice is the one determining our destiny.</p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section><!-- #solution -->
+
+
+
+    <!--==========================
+      Customer segment Section
+    ============================-->
+    <section id="problem">
+
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-6 col-md-6">
+            <div class="problem-img">
+              <br/><br/><br/>
+              <img src="img/customer-segment1.PNG" alt="" width="500">
+            </div>
+          </div>
+
+          <div class="col-lg-5 col-md-7">
+            <div class="problem-content">
+              <br/>
+              <h2>Customer segment</h2>
+              <br/><br/>
+              <p>Customers of this platform include both teens and adults. Teens that recently graduated (or are about to in the next few years at most, but those in a smaller proportion) that have an interest in pursuing a higher educational degree and parents that intend to solidify their children's future and education and take a look in good university options.</p>
+             
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section><!-- #solution -->
+
+
+
+    <!-- ==========================
+      Services Section
+    ============================-->
+    <!-- <section id="services" class="section-bg">
+      <div class="container">
+
+        <header class="section-header">
+          <h3>Services</h3>
+          <p>Laudem latine persequeris id sed, ex fabulas delectus quo. No vel partiendo abhorreant vituperatoribus.</p>
+        </header>
+
+        <div class="row">
+
+          <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-duration="1.4s">
+            <div class="box">
+              <div class="icon" style="background: #fceef3;"><i class="ion-ios-analytics-outline" style="color: #ff689b;"></i></div>
+              <h4 class="title"><a href="">Lorem Ipsum</a></h4>
+              <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-duration="1.4s">
+            <div class="box">
+              <div class="icon" style="background: #fff0da;"><i class="ion-ios-bookmarks-outline" style="color: #e98e06;"></i></div>
+              <h4 class="title"><a href="">Dolor Sitema</a></h4>
+              <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
+            <div class="box">
+              <div class="icon" style="background: #e6fdfc;"><i class="ion-ios-paper-outline" style="color: #3fcdc7;"></i></div>
+              <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
+              <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
+            <div class="box">
+              <div class="icon" style="background: #eafde7;"><i class="ion-ios-speedometer-outline" style="color:#41cf2e;"></i></div>
+              <h4 class="title"><a href="">Magni Dolores</a></h4>
+              <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-delay="0.2s" data-wow-duration="1.4s">
+            <div class="box">
+              <div class="icon" style="background: #e1eeff;"><i class="ion-ios-world-outline" style="color: #2282ff;"></i></div>
+              <h4 class="title"><a href="">Nemo Enim</a></h4>
+              <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-delay="0.2s" data-wow-duration="1.4s">
+            <div class="box">
+              <div class="icon" style="background: #ecebff;"><i class="ion-ios-clock-outline" style="color: #8660fe;"></i></div>
+              <h4 class="title"><a href="">Eiusmod Tempor</a></h4>
+              <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>#services -->
+
+
+
+    <!--==========================
+      Competition Section
+    ============================-->
+    <section id="services" class="section-bg">
+      <div class="container">
+
+        <header class="section-header">
+          <h3>Competition</h3>
+        </header>
+
+        <div class="row">
+
+          <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-duration="1.4s">
+            <div class="box">
+              <div class="icon" style="background: #fceef3;"><i class="ion-ios-analytics-outline" style="color: #ff689b;"></i></div>
+              <h4 class="title"><a href="">Lorem Ipsum</a></h4>
+              <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-duration="1.4s">
+            <div class="box">
+              <div class="icon" style="background: #fff0da;"><i class="ion-ios-bookmarks-outline" style="color: #e98e06;"></i></div>
+              <h4 class="title"><a href="">Dolor Sitema</a></h4>
+              <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
+            <div class="box">
+              <div class="icon" style="background: #e6fdfc;"><i class="ion-ios-paper-outline" style="color: #3fcdc7;"></i></div>
+              <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
+              <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
+            <div class="box">
+              <div class="icon" style="background: #eafde7;"><i class="ion-ios-speedometer-outline" style="color:#41cf2e;"></i></div>
+              <h4 class="title"><a href="">Magni Dolores</a></h4>
+              <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-delay="0.2s" data-wow-duration="1.4s">
+            <div class="box">
+              <div class="icon" style="background: #e1eeff;"><i class="ion-ios-world-outline" style="color: #2282ff;"></i></div>
+              <h4 class="title"><a href="">Nemo Enim</a></h4>
+              <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-delay="0.2s" data-wow-duration="1.4s">
+            <div class="box">
+              <div class="icon" style="background: #ecebff;"><i class="ion-ios-clock-outline" style="color: #8660fe;"></i></div>
+              <h4 class="title"><a href="">Eiusmod Tempor</a></h4>
+              <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- #competition -->
+
+
+
+    <!--==========================
+      Why Us Section
+    ============================-->
+    <section id="why-us" class="wow fadeIn">
+      <div class="container-fluid">
+        
+        <header class="section-header">
+          <h3>Why choose us?</h3>
+          <p>Laudem latine persequeris id sed, ex fabulas delectus quo. No vel partiendo abhorreant vituperatoribus.</p>
+        </header>
+
+        <div class="row">
+
+          <div class="col-lg-6">
+            <div class="why-us-img">
+              <img src="img/why-us.jpg" alt="" class="img-fluid">
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="why-us-content">
+              <p>Molestiae omnis numquam corrupti omnis itaque. Voluptatum quidem impedit. Odio dolorum exercitationem est error omnis repudiandae ad dolorum sit.</p>
+              <p>
+                Explicabo repellendus quia labore. Non optio quo ea ut ratione et quaerat. Porro facilis deleniti porro consequatur
+                et temporibus. Labore est odio.
+
+                Odio omnis saepe qui. Veniam eaque ipsum. Ea quia voluptatum quis explicabo sed nihil repellat..
+              </p>
+
+              <div class="features wow bounceInUp clearfix">
+                <i class="fa fa-diamond" style="color: #f058dc;"></i>
+                <h4>Corporis dolorem</h4>
+                <p>Commodi quia voluptatum. Est cupiditate voluptas quaerat officiis ex alias dignissimos et ipsum. Soluta at enim modi ut incidunt dolor et.</p>
+              </div>
+
+              <div class="features wow bounceInUp clearfix">
+                <i class="fa fa-object-group" style="color: #ffb774;"></i>
+                <h4>Eum ut aspernatur</h4>
+                <p>Molestias eius rerum iusto voluptas et ab cupiditate aut enim. Assumenda animi occaecati. Quo dolore fuga quasi autem aliquid ipsum odit. Perferendis doloremque iure nulla aut.</p>
+              </div>
+              
+              <div class="features wow bounceInUp clearfix">
+                <i class="fa fa-language" style="color: #589af1;"></i>
+                <h4>Voluptates dolores</h4>
+                <p>Voluptates nihil et quis omnis et eaque omnis sint aut. Ducimus dolorum aspernatur. Totam dolores ut enim ullam voluptas distinctio aut.</p>
+              </div>
+              
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="container">
+        <div class="row counters">
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-toggle="counter-up">274</span>
+            <p>Clients</p>
+          </div>
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-toggle="counter-up">421</span>
+            <p>Projects</p>
+          </div>
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-toggle="counter-up">1,364</span>
+            <p>Hours Of Support</p>
+          </div>
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-toggle="counter-up">18</span>
+            <p>Hard Workers</p>
+          </div>
+  
+        </div>
+
+      </div>
+    </section>
+
+    <!--==========================
+      Call To Action Section
+    ============================-->
+    <section id="call-to-action" class="wow fadeInUp">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-9 text-center text-lg-left">
+            <h3 class="cta-title">Call To Action</h3>
+            <p class="cta-text"> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+          <div class="col-lg-3 cta-btn-container text-center">
+            <a class="cta-btn align-middle" href="#">Call To Action</a>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- #call-to-action -->
+
+    <!--==========================
+      Features Section
+    ============================-->
+    <section id="features">
+      <div class="container">
+
+        <div class="row feature-item">
+          <div class="col-lg-6 wow fadeInUp">
+            <img src="img/features-1.svg" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-6 wow fadeInUp pt-5 pt-lg-0">
+            <h4>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h4>
+            <p>
+              Ipsum in aspernatur ut possimus sint. Quia omnis est occaecati possimus ea. Quas molestiae perspiciatis occaecati qui rerum. Deleniti quod porro sed quisquam saepe. Numquam mollitia recusandae non ad at et a.
+            </p>
+            <p>
+              Ad vitae recusandae odit possimus. Quaerat cum ipsum corrupti. Odit qui asperiores ea corporis deserunt veritatis quidem expedita perferendis. Qui rerum eligendi ex doloribus quia sit. Porro rerum eum eum.
+            </p>
+          </div>
+        </div>
+
+        <div class="row feature-item mt-5 pt-5">
+          <div class="col-lg-6 wow fadeInUp order-1 order-lg-2">
+            <img src="img/features-2.svg" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-6 wow fadeInUp pt-4 pt-lg-0 order-2 order-lg-1">
+            <h4>Neque saepe temporibus repellat ea ipsum et. Id vel et quia tempora facere reprehenderit.</h4>
+            <p>
+             Delectus alias ut incidunt delectus nam placeat in consequatur. Sed cupiditate quia ea quis. Voluptas nemo qui aut distinctio. Cumque fugit earum est quam officiis numquam. Ducimus corporis autem at blanditiis beatae incidunt sunt. 
+            </p>
+            <p>
+              Voluptas saepe natus quidem blanditiis. Non sunt impedit voluptas mollitia beatae. Qui esse molestias. Laudantium libero nisi vitae debitis. Dolorem cupiditate est perferendis iusto.
+            </p>
+            <p>
+              Eum quia in. Magni quas ipsum a. Quis ex voluptatem inventore sint quia modi. Numquam est aut fuga mollitia exercitationem nam accusantium provident quia.
+            </p>
+          </div>
+          
+        </div>
+
+      </div>
+    </section><!-- #about -->
+
+    <!--==========================
+      Portfolio Section
+    ============================-->
+    <section id="portfolio" class="section-bg">
+      <div class="container">
+
+        <header class="section-header">
+          <h3 class="section-title">Our Portfolio</h3>
+        </header>
+
+        <div class="row">
+          <div class="col-lg-12">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-app">App</li>
+              <li data-filter=".filter-card">Card</li>
+              <li data-filter=".filter-web">Web</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row portfolio-container">
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="img/portfolio/app1.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4><a href="#">App 1</a></h4>
+                <p>App</p>
+                <div>
+                  <a href="img/portfolio/app1.jpg" data-lightbox="portfolio" data-title="App 1" class="link-preview" title="Preview"><i class="ion ion-eye"></i></a>
+                  <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web" data-wow-delay="0.1s">
+            <div class="portfolio-wrap">
+              <img src="img/portfolio/web3.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4><a href="#">Web 3</a></h4>
+                <p>Web</p>
+                <div>
+                  <a href="img/portfolio/web3.jpg" class="link-preview" data-lightbox="portfolio" data-title="Web 3" title="Preview"><i class="ion ion-eye"></i></a>
+                  <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app" data-wow-delay="0.2s">
+            <div class="portfolio-wrap">
+              <img src="img/portfolio/app2.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4><a href="#">App 2</a></h4>
+                <p>App</p>
+                <div>
+                  <a href="img/portfolio/app2.jpg" class="link-preview" data-lightbox="portfolio" data-title="App 2" title="Preview"><i class="ion ion-eye"></i></a>
+                  <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="img/portfolio/card2.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4><a href="#">Card 2</a></h4>
+                <p>Card</p>
+                <div>
+                  <a href="img/portfolio/card2.jpg" class="link-preview" data-lightbox="portfolio" data-title="Card 2" title="Preview"><i class="ion ion-eye"></i></a>
+                  <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web" data-wow-delay="0.1s">
+            <div class="portfolio-wrap">
+              <img src="img/portfolio/web2.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4><a href="#">Web 2</a></h4>
+                <p>Web</p>
+                <div>
+                  <a href="img/portfolio/web2.jpg" class="link-preview" data-lightbox="portfolio" data-title="Web 2" title="Preview"><i class="ion ion-eye"></i></a>
+                  <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app" data-wow-delay="0.2s">
+            <div class="portfolio-wrap">
+              <img src="img/portfolio/app3.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4><a href="#">App 3</a></h4>
+                <p>App</p>
+                <div>
+                  <a href="img/portfolio/app3.jpg" class="link-preview" data-lightbox="portfolio" data-title="App 3" title="Preview"><i class="ion ion-eye"></i></a>
+                  <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="img/portfolio/card1.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4><a href="#">Card 1</a></h4>
+                <p>Card</p>
+                <div>
+                  <a href="img/portfolio/card1.jpg" class="link-preview" data-lightbox="portfolio" data-title="Card 1" title="Preview"><i class="ion ion-eye"></i></a>
+                  <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card" data-wow-delay="0.1s">
+            <div class="portfolio-wrap">
+              <img src="img/portfolio/card3.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4><a href="#">Card 3</a></h4>
+                <p>Card</p>
+                <div>
+                  <a href="img/portfolio/card3.jpg" class="link-preview" data-lightbox="portfolio" data-title="Card 3" title="Preview"><i class="ion ion-eye"></i></a>
+                  <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web" data-wow-delay="0.2s">
+            <div class="portfolio-wrap">
+              <img src="img/portfolio/web1.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4><a href="#">Web 1</a></h4>
+                <p>Web</p>
+                <div>
+                  <a href="img/portfolio/web1.jpg" class="link-preview" data-lightbox="portfolio" data-title="Web 1" title="Preview"><i class="ion ion-eye"></i></a>
+                  <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- #portfolio -->
+
+    <!--==========================
+      Clients Section
+    ============================-->
+    <section id="testimonials">
+      <div class="container">
+
+        <header class="section-header">
+          <h3>Testimonials</h3>
+        </header>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+
+            <div class="owl-carousel testimonials-carousel wow fadeInUp">
+    
+              <div class="testimonial-item">
+                <img src="img/testimonial-1.jpg" class="testimonial-img" alt="">
+                <h3>Saul Goodman</h3>
+                <h4>Ceo &amp; Founder</h4>
+                <p>
+                  Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                </p>
+              </div>
+    
+              <div class="testimonial-item">
+                <img src="img/testimonial-2.jpg" class="testimonial-img" alt="">
+                <h3>Sara Wilsson</h3>
+                <h4>Designer</h4>
+                <p>
+                  Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
+                </p>
+              </div>
+    
+              <div class="testimonial-item">
+                <img src="img/testimonial-3.jpg" class="testimonial-img" alt="">
+                <h3>Jena Karlis</h3>
+                <h4>Store Owner</h4>
+                <p>
+                  Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
+                </p>
+              </div>
+    
+              <div class="testimonial-item">
+                <img src="img/testimonial-4.jpg" class="testimonial-img" alt="">
+                <h3>Matt Brandon</h3>
+                <h4>Freelancer</h4>
+                <p>
+                  Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
+                </p>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+
+      </div>
+    </section><!-- #testimonials -->
+
+    <!--==========================
+      Team Section
+    ============================-->
+    <section id="team" class="section-bg">
+      <div class="container">
+        <div class="section-header">
+          <h3>Team</h3>
+          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 wow fadeInUp">
+            <div class="member">
+              <img src="img/team-1.jpg" class="img-fluid" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>Walter White</h4>
+                  <span>Chief Executive Officer</span>
+                  <div class="social">
+                    <a href=""><i class="fa fa-twitter"></i></a>
+                    <a href=""><i class="fa fa-facebook"></i></a>
+                    <a href=""><i class="fa fa-google-plus"></i></a>
+                    <a href=""><i class="fa fa-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="member">
+              <img src="img/team-2.jpg" class="img-fluid" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>Sarah Jhonson</h4>
+                  <span>Product Manager</span>
+                  <div class="social">
+                    <a href=""><i class="fa fa-twitter"></i></a>
+                    <a href=""><i class="fa fa-facebook"></i></a>
+                    <a href=""><i class="fa fa-google-plus"></i></a>
+                    <a href=""><i class="fa fa-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+            <div class="member">
+              <img src="img/team-3.jpg" class="img-fluid" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>William Anderson</h4>
+                  <span>CTO</span>
+                  <div class="social">
+                    <a href=""><i class="fa fa-twitter"></i></a>
+                    <a href=""><i class="fa fa-facebook"></i></a>
+                    <a href=""><i class="fa fa-google-plus"></i></a>
+                    <a href=""><i class="fa fa-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+            <div class="member">
+              <img src="img/team-4.jpg" class="img-fluid" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>Amanda Jepson</h4>
+                  <span>Accountant</span>
+                  <div class="social">
+                    <a href=""><i class="fa fa-twitter"></i></a>
+                    <a href=""><i class="fa fa-facebook"></i></a>
+                    <a href=""><i class="fa fa-google-plus"></i></a>
+                    <a href=""><i class="fa fa-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- #team -->
+
+    <!--==========================
+      Clients Section
+    ============================-->
+    <section id="clients" class="wow fadeInUp">
+      <div class="container">
+
+        <header class="section-header">
+          <h3>Our Clients</h3>
+        </header>
+
+        <div class="owl-carousel clients-carousel">
+          <img src="img/clients/client-1.png" alt="">
+          <img src="img/clients/client-2.png" alt="">
+          <img src="img/clients/client-3.png" alt="">
+          <img src="img/clients/client-4.png" alt="">
+          <img src="img/clients/client-5.png" alt="">
+          <img src="img/clients/client-6.png" alt="">
+          <img src="img/clients/client-7.png" alt="">
+          <img src="img/clients/client-8.png" alt="">
+        </div>
+
+      </div>
+    </section><!-- #clients -->
+
+
+    <!--==========================
+      Pricing Section
+    ============================-->
+    <section id="pricing" class="wow fadeInUp section-bg">
+
+      <div class="container">
+
+        <header class="section-header">
+          <h3>Pricing</h3>
+          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
+        </header>
+
+        <div class="row flex-items-xs-middle flex-items-xs-center">
+      
+          <!-- Basic Plan  -->
+          <div class="col-xs-12 col-lg-4">
+            <div class="card">
+              <div class="card-header">
+                <h3><span class="currency">$</span>19<span class="period">/month</span></h3>
+              </div>
+              <div class="card-block">
+                <h4 class="card-title"> 
+                  Basic Plan
+                </h4>
+                <ul class="list-group">
+                  <li class="list-group-item">Odio animi voluptates</li>
+                  <li class="list-group-item">Inventore quisquam et</li>
+                  <li class="list-group-item">Et perspiciatis suscipit</li>
+                  <li class="list-group-item">24/7 Support System</li>
+                </ul>
+                <a href="#" class="btn">Choose Plan</a>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Regular Plan  -->
+          <div class="col-xs-12 col-lg-4">
+            <div class="card">
+              <div class="card-header">
+                <h3><span class="currency">$</span>29<span class="period">/month</span></h3>
+              </div>
+              <div class="card-block">
+                <h4 class="card-title"> 
+                  Regular Plan
+                </h4>
+                <ul class="list-group">
+                  <li class="list-group-item">Odio animi voluptates</li>
+                  <li class="list-group-item">Inventore quisquam et</li>
+                  <li class="list-group-item">Et perspiciatis suscipit</li>
+                  <li class="list-group-item">24/7 Support System</li>
+                </ul>
+                <a href="#" class="btn">Choose Plan</a>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Premium Plan  -->
+          <div class="col-xs-12 col-lg-4">
+            <div class="card">
+              <div class="card-header">
+                <h3><span class="currency">$</span>39<span class="period">/month</span></h3>
+              </div>
+              <div class="card-block">
+                <h4 class="card-title"> 
+                  Premium Plan
+                </h4>
+                <ul class="list-group">
+                  <li class="list-group-item">Odio animi voluptates</li>
+                  <li class="list-group-item">Inventore quisquam et</li>
+                  <li class="list-group-item">Et perspiciatis suscipit</li>
+                  <li class="list-group-item">24/7 Support System</li>
+                </ul>
+                <a href="#" class="btn">Choose Plan</a>
+              </div>
+            </div>
+          </div>
+      
+        </div>
+      </div>
+
+    </section><!-- #pricing -->
+
+    <!--==========================
+      Frequently Asked Questions Section
+    ============================-->
+    <section id="faq">
+      <div class="container">
+        <header class="section-header">
+          <h3>Frequently Asked Questions</h3>
+          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
+        </header>
+
+        <ul id="faq-list" class="wow fadeInUp">
+          <li>
+            <a data-toggle="collapse" class="collapsed" href="#faq1">Non consectetur a erat nam at lectus urna duis? <i class="ion-android-remove"></i></a>
+            <div id="faq1" class="collapse" data-parent="#faq-list">
+              <p>
+                Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <a data-toggle="collapse" href="#faq2" class="collapsed">Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque? <i class="ion-android-remove"></i></a>
+            <div id="faq2" class="collapse" data-parent="#faq-list">
+              <p>
+                Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <a data-toggle="collapse" href="#faq3" class="collapsed">Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi? <i class="ion-android-remove"></i></a>
+            <div id="faq3" class="collapse" data-parent="#faq-list">
+              <p>
+                Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <a data-toggle="collapse" href="#faq4" class="collapsed">Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla? <i class="ion-android-remove"></i></a>
+            <div id="faq4" class="collapse" data-parent="#faq-list">
+              <p>
+                Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <a data-toggle="collapse" href="#faq5" class="collapsed">Tempus quam pellentesque nec nam aliquam sem et tortor consequat? <i class="ion-android-remove"></i></a>
+            <div id="faq5" class="collapse" data-parent="#faq-list">
+              <p>
+                Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <a data-toggle="collapse" href="#faq6" class="collapsed">Tortor vitae purus faucibus ornare. Varius vel pharetra vel turpis nunc eget lorem dolor? <i class="ion-android-remove"></i></a>
+            <div id="faq6" class="collapse" data-parent="#faq-list">
+              <p>
+                Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo integer malesuada nunc vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc eget lorem dolor sed. Ut venenatis tellus in metus vulputate eu scelerisque. Pellentesque diam volutpat commodo sed egestas egestas fringilla phasellus faucibus. Nibh tellus molestie nunc non blandit massa enim nec.
+              </p>
+            </div>
+          </li>
+
+        </ul>
+
+      </div>
+    </section><!-- #faq -->
+
+  </main>
+
+  <!--==========================
+    Footer
+  ============================-->
+  <footer id="footer" class="section-bg">
+    <div class="footer-top">
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-lg-6">
+
+            <div class="row">
+
+                <div class="col-sm-6">
+
+                  <div class="footer-info">
+                    <h3>Rapid</h3>
+                    <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus. Scelerisque felis imperdiet proin fermentum leo. Amet volutpat consequat mauris nunc congue.</p>
+                  </div>
+
+                  <div class="footer-newsletter">
+                    <h4>Our Newsletter</h4>
+                    <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna veniam enim veniam illum dolore legam minim quorum culpa amet magna export quem.</p>
+                    <form action="" method="post">
+                      <input type="email" name="email"><input type="submit"  value="Subscribe">
+                    </form>
+                  </div>
+
+                </div>
+
+                <div class="col-sm-6">
+                  <div class="footer-links">
+                    <h4>Useful Links</h4>
+                    <ul>
+                      <li><a href="#">Home</a></li>
+                      <li><a href="#">About us</a></li>
+                      <li><a href="#">Services</a></li>
+                      <li><a href="#">Terms of service</a></li>
+                      <li><a href="#">Privacy policy</a></li>
+                    </ul>
+                  </div>
+
+                  <div class="footer-links">
+                    <h4>Contact Us</h4>
+                    <p>
+                      A108 Adam Street <br>
+                      New York, NY 535022<br>
+                      United States <br>
+                      <strong>Phone:</strong> +1 5589 55488 55<br>
+                      <strong>Email:</strong> info@example.com<br>
+                    </p>
+                  </div>
+
+                  <div class="social-links">
+                    <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+                    <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+                    <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+                    <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+                  </div>
+
+                </div>
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-6">
+
+            <div class="form">
+              
+              <h4>Send us a message</h4>
+              <p>Eos ipsa est voluptates. Nostrum nam libero ipsa vero. Debitis quasi sit eaque numquam similique commodi harum aut temporibus.</p>
+              <form action="" method="post" role="form" class="contactForm">
+                <div class="form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                  <div class="validation"></div>
+                </div>
+                <div class="form-group">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                  <div class="validation"></div>
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                  <div class="validation"></div>
+                </div>
+                <div class="form-group">
+                  <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                  <div class="validation"></div>
+                </div>
+
+                <div id="sendmessage">Your message has been sent. Thank you!</div>
+                <div id="errormessage"></div>
+
+                <div class="text-center"><button type="submit" title="Send Message">Send Message</button></div>
+              </form>
+            </div>
+
+          </div>
+
+          
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong>Rapid</strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!--
+          All the links in the footer should remain intact.
+          You can delete the links only if you purchased the pro version.
+          Licensing information: https://bootstrapmade.com/license/
+          Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Rapid
+        -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- #footer -->
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+  <!-- Uncomment below i you want to use a preloader -->
+  <!-- <div id="preloader"></div> -->
+
+  <!-- JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/mobile-nav/mobile-nav.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/waypoints/waypoints.min.js"></script>
+  <script src="lib/counterup/counterup.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="lib/isotope/isotope.pkgd.min.js"></script>
+  <script src="lib/lightbox/js/lightbox.min.js"></script>
+  <!-- Contact Form JavaScript File -->
+  <script src="contactform/contactform.js"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="js/main.js"></script>
 
 </body>
 </html>
