@@ -685,6 +685,25 @@ h5 {
   font-weight: 700;
 }
 
+
+/* MVP Section
+--------------------------------*/
+
+#mvp {
+  padding: 50px 0;
+}
+
+#mvp .mvp-content {
+  padding-top: 40px;
+  text-align: left;
+}
+
+#mvp .mvp-content h2 {
+  color: #413e66;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+
 /* Problem Section
 --------------------------------*/
 
